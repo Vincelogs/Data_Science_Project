@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>User Data Input Form</h1>
+        
+        <!-- Display the result if available -->
+        {% if result %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p>The submitted data is classified as: <strong>{{ result }}</strong></p>
+        </div>
+        {% endif %}
+
+        <!-- Form starts here -->
+        <form action="/" method="POST">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select><br>
+
+            <label for="following_rate">Following Rate:</label>
+            <input type="text" id="following_rate" name="following_rate" required><br>
+
+            <label for="followers_avg_age">Followers' Avg Age:</label>
+            <input type="text" id="followers_avg_age" name="followers_avg_age" required><br>
+
+            <label for="following_avg_age">Following Avg Age:</label>
+            <input type="text" id="following_avg_age" name="following_avg_age" required><br>
+
+            <label for="max_repetitive_punc">Max Repetitive Punctuations:</label>
+            <input type="text" id="max_repetitive_punc" name="max_repetitive_punc" required><br>
+
+            <label for="num_of_hashtags_per_action">Num of Hashtags Per Action:</label>
+            <input type="text" id="num_of_hashtags_per_action" name="num_of_hashtags_per_action" required><br>
+
+            <label for="emoji_count_per_action">Emoji Count Per Action:</label>
+            <input type="text" id="emoji_count_per_action" name="emoji_count_per_action" required><br>
+
+            <label for="punctuations_per_action">Punctuations Per Action:</label>
+            <input type="text" id="punctuations_per_action" name="punctuations_per_action" required><br>
+
+            <label for="number_of_words_per_action">Number of Words Per Action:</label>
+            <input type="text" id="number_of_words_per_action" name="number_of_words_per_action" required><br>
+
+            <label for="avgCompletion">Avg Completion Rate:</label>
+            <input type="text" id="avgCompletion" name="avgCompletion" required><br>
+
+            <label for="avgTimeSpent">Avg Time Spent:</label>
+            <input type="text" id="avgTimeSpent" name="avgTimeSpent" required><br>
+
+            <label for="avgDuration">Avg Video Duration:</label>
+            <input type="text" id="avgDuration" name="avgDuration" required><br>
+
+            <label for="creations">Number of Creations:</label>
+            <input type="number" id="creations" name="creations" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
